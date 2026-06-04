@@ -627,7 +627,7 @@ impl Peripherals {
     #[doc = r""]
     #[doc = r" Each of the returned peripherals must be used at most once."]
     #[inline]
-    pub unsafe fn steal() -> Self {
+    pub unsafe fn steal() -> Self { unsafe {
         DEVICE_PERIPHERALS = true;
         Peripherals {
             hsmci: Hsmci::steal(),
@@ -669,5 +669,5 @@ impl Peripherals {
             rtc: Rtc::steal(),
             gpbr: Gpbr::steal(),
         }
-    }
+    }}
 }
