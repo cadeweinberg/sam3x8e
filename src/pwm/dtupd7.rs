@@ -1,0 +1,27 @@
+#[doc = "Register `DTUPD7` writer"]
+pub type W = crate::W<Dtupd7Spec>;
+#[doc = "Field `DTHUPD` writer - Dead-Time Value Update for PWMHx Output"]
+pub type DthupdW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+#[doc = "Field `DTLUPD` writer - Dead-Time Value Update for PWMLx Output"]
+pub type DtlupdW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
+impl W {
+    #[doc = "Bits 0:15 - Dead-Time Value Update for PWMHx Output"]
+    #[inline(always)]
+    pub fn dthupd(&mut self) -> DthupdW<'_, Dtupd7Spec> {
+        DthupdW::new(self, 0)
+    }
+    #[doc = "Bits 16:31 - Dead-Time Value Update for PWMLx Output"]
+    #[inline(always)]
+    pub fn dtlupd(&mut self) -> DtlupdW<'_, Dtupd7Spec> {
+        DtlupdW::new(self, 16)
+    }
+}
+#[doc = "PWM Channel Dead Time Update Register (ch_num = 7)\n\nYou can [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dtupd7::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Dtupd7Spec;
+impl crate::RegisterSpec for Dtupd7Spec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`dtupd7::W`](W) writer structure"]
+impl crate::Writable for Dtupd7Spec {
+    type Safety = crate::Unsafe;
+}

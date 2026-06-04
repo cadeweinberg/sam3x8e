@@ -1,0 +1,20 @@
+#[doc = "Register `CDTYUPD4` writer"]
+pub type W = crate::W<Cdtyupd4Spec>;
+#[doc = "Field `CDTYUPD` writer - Channel Duty-Cycle Update"]
+pub type CdtyupdW<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
+impl W {
+    #[doc = "Bits 0:23 - Channel Duty-Cycle Update"]
+    #[inline(always)]
+    pub fn cdtyupd(&mut self) -> CdtyupdW<'_, Cdtyupd4Spec> {
+        CdtyupdW::new(self, 0)
+    }
+}
+#[doc = "PWM Channel Duty Cycle Update Register (ch_num = 4)\n\nYou can [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cdtyupd4::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cdtyupd4Spec;
+impl crate::RegisterSpec for Cdtyupd4Spec {
+    type Ux = u32;
+}
+#[doc = "`write(|w| ..)` method takes [`cdtyupd4::W`](W) writer structure"]
+impl crate::Writable for Cdtyupd4Spec {
+    type Safety = crate::Unsafe;
+}

@@ -1,0 +1,35 @@
+#[doc = "Register `CDTY6` reader"]
+pub type R = crate::R<Cdty6Spec>;
+#[doc = "Register `CDTY6` writer"]
+pub type W = crate::W<Cdty6Spec>;
+#[doc = "Field `CDTY` reader - Channel Duty-Cycle"]
+pub type CdtyR = crate::FieldReader<u32>;
+#[doc = "Field `CDTY` writer - Channel Duty-Cycle"]
+pub type CdtyW<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
+impl R {
+    #[doc = "Bits 0:23 - Channel Duty-Cycle"]
+    #[inline(always)]
+    pub fn cdty(&self) -> CdtyR {
+        CdtyR::new(self.bits & 0x00ff_ffff)
+    }
+}
+impl W {
+    #[doc = "Bits 0:23 - Channel Duty-Cycle"]
+    #[inline(always)]
+    pub fn cdty(&mut self) -> CdtyW<'_, Cdty6Spec> {
+        CdtyW::new(self, 0)
+    }
+}
+#[doc = "PWM Channel Duty Cycle Register (ch_num = 6)\n\nYou can [`read`](crate::Reg::read) this register and get [`cdty6::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cdty6::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cdty6Spec;
+impl crate::RegisterSpec for Cdty6Spec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`cdty6::R`](R) reader structure"]
+impl crate::Readable for Cdty6Spec {}
+#[doc = "`write(|w| ..)` method takes [`cdty6::W`](W) writer structure"]
+impl crate::Writable for Cdty6Spec {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets CDTY6 to value 0"]
+impl crate::Resettable for Cdty6Spec {}
