@@ -1,5 +1,5 @@
 [package]
-name = "sam3x8e-rs"
+name = "sam3x8e"
 version = "0.1.0"
 edition = "2024"
 
